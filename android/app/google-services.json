@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "85961672220",
+    "project_id": "shoesavvy-app",
+    "storage_bucket": "shoesavvy-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85961672220:android:4461cc64a6b4db127d41d9",
+        "android_client_info": {
+          "package_name": "com.example.shoesavvy_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXJkKVx_BpL95GZgxmQBD3hxraN7yr-HM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
