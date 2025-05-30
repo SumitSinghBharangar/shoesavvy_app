@@ -35,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 const Text("shoesavvy"),
                 // banners
-                const BannerWidget(),
+                // const BannerWidget(),      // banner widget
                 const Text("dfkdkfdjkl"),
                 HeadingWidget(
                   buttontext: "See More",

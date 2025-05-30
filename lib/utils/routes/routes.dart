@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shoesavvy_app/screens/admin-panel/admin-panel-mainscreen.dart';
 import 'package:shoesavvy_app/screens/auth-ui/pageroot.dart';
 import 'package:shoesavvy_app/screens/auth-ui/welcome-screen.dart';
-import 'package:shoesavvy_app/screens/user-panel/trial-mainscreen.dart';
 
 import '../../screens/auth-ui/splash-screen.dart';
 import '../../screens/user-panel/main-screen.dart';
