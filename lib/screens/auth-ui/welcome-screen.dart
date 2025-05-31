@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:shoesavvy_app/controllers/google-signin-controller.dart';
+import 'package:shoesavvy_app/screens/user-panel/trial-mainscreen.dart';
 
 import 'package:shoesavvy_app/utils/app-constants.dart';
 import 'package:shoesavvy_app/utils/routes/route-name.dart';
+import 'package:shoesavvy_app/utils/routes/routes.dart';
 import 'package:shoesavvy_app/utils/styles/appcolor.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -122,7 +124,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
               onTap: () {
-                Navigator.pushReplacementNamed(context, RouteName.mainscreen);
+                Navigator.pushReplacement(
+                    context,
+                    CupertinoPageRoute(
+                        builder: (context) => const TrialMainScreen()));
               },
             )
           ],

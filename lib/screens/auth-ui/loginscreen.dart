@@ -1,15 +1,14 @@
 import 'dart:math';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:shoesavvy_app/controllers/get-user-data-controller.dart';
 import 'package:shoesavvy_app/controllers/sign-in-controller.dart';
 import 'package:shoesavvy_app/screens/admin-panel/admin-panel-mainscreen.dart';
 import 'package:shoesavvy_app/screens/user-panel/main-screen.dart';
-import 'package:shoesavvy_app/utils/routes/route-name.dart';
+import 'package:shoesavvy_app/screens/user-panel/trial-mainscreen.dart';
+
 import '../../utils/styles/appcolor.dart';
 import '../../utils/utils.dart';
 import '../../widgets/emil-input-box.dart';
@@ -220,7 +219,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 var userdata = await getUserDatacontroller
                                     .getUserData(userCredential!.user!.uid);
 
-                                    
                                 if (userCredential != null) {
                                   if (userCredential.user!.emailVerified) {
                                     if (userdata[0]["isAdmin"] == true) {
@@ -232,7 +230,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               AppColors.primaryColor,
                                           colorText: Colors.white);
                                     } else {
-                                      Get.offAll(() => MainScreen());
+                                      Get.offAll(() => const TrialMainScreen());
                                       Get.snackbar("Success User Login",
                                           "Login Successfullu",
                                           snackPosition: SnackPosition.BOTTOM,

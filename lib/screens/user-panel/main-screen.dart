@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shoesavvy_app/widgets/banner-widget.dart';
+
 import 'package:shoesavvy_app/widgets/categoris-widget.dart';
 
 import 'package:shoesavvy_app/widgets/custom-drawer-widget.dart';
@@ -33,24 +33,24 @@ class _MainScreenState extends State<MainScreen> {
                 SizedBox(
                   height: Get.height / 90,
                 ),
-                const Text("shoesavvy"),
+
                 // banners
                 // const BannerWidget(),      // banner widget
-                const Text("dfkdkfdjkl"),
+
                 HeadingWidget(
                   buttontext: "See More",
                   headingtitle: "Categories",
                   ontap: () {},
                   subheadingtitle: "Low budget",
                 ),
-                CategoriesWidget(),
+                const CategoriesWidget(),
                 HeadingWidget(
                   buttontext: "See More",
                   headingtitle: "Flash Sale",
                   ontap: () {},
                   subheadingtitle: "According to Your Budget",
                 ),
-                CategoriesWidget()
+                const CategoriesWidget()
               ],
             ),
           ),

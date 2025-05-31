@@ -19,28 +19,28 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
       future: FirebaseFirestore.instance.collection("categories").get(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
-          return Center(
+          return const Center(
             child: Text("Error"),
           );
         }
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Container(
+          return SizedBox(
             height: Get.height * 0.2,
-            child: Center(
+            child: const Center(
               child: CupertinoActivityIndicator(),
             ),
           );
         }
         if (snapshot.data!.docs.isEmpty) {
-          return Center(
+          return const Center(
             child: Text("No Categories found"),
           );
         }
         if (snapshot.data != null) {
-          return Container(
+          return SizedBox(
             height: Get.height * 0.20,
             child: ListView.builder(
-                physics: BouncingScrollPhysics(
+                physics: const BouncingScrollPhysics(
                     decelerationRate: ScrollDecelerationRate.fast),
                 itemCount: snapshot.data!.docs.length,
                 shrinkWrap: true,
@@ -56,7 +56,7 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                   return Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.all(5.0),
                         child: Container(
                           child: FillImageCard(
                             borderRadius: 11,
